@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+<bean id="p1" class="com.two95.employee.Two95Employee">
+<constructor-arg>
+			<list>
+			<ref bean="e1"></ref>	
+				
+			</list>
+		</constructor-arg>
+
+</bean>
+	<bean id="e1" class="com.two95.employee.Team">
+		<constructor-arg>
+			<list>
+				<ref bean="r1"></ref>
+				<ref bean="r2"></ref>
+				<ref bean="r3"></ref>
+				<ref bean="r4"></ref>
+				<ref bean="r5"></ref>
+			</list>
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="m1"></ref>
+				<ref bean="m2"></ref>
+				<ref bean="m3"></ref>
+				<ref bean="m4"></ref>
+				<ref bean="m5"></ref>
+
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="r1" class="com.two95.employee.Recruiter">
+		<constructor-arg value="Ramu"></constructor-arg>
+		<constructor-arg value="r@gmail.com"></constructor-arg>
+		<constructor-arg value="Manager"></constructor-arg>
+		<constructor-arg value="Recruting"></constructor-arg>
+	</bean>
+	<bean id="r2" class="com.two95.employee.Recruiter">
+		<constructor-arg value="S"></constructor-arg>
+		<constructor-arg value="s@gmail.com"></constructor-arg>
+		<constructor-arg value="CEO"></constructor-arg>
+		<constructor-arg value="Recruting"></constructor-arg>
+	</bean>
+	<bean id="r3" class="com.two95.employee.Recruiter">
+		<constructor-arg value="George"></constructor-arg>
+		<constructor-arg value="g@gmail.com"></constructor-arg>
+		<constructor-arg value="HR"></constructor-arg>
+		<constructor-arg value="Recruting"></constructor-arg>
+	</bean>
+	<bean id="r4" class="com.two95.employee.Recruiter">
+		<constructor-arg value="Theju"></constructor-arg>
+		<constructor-arg value="t@gmail.com"></constructor-arg>
+		<constructor-arg value="Team Leader"></constructor-arg>
+		<constructor-arg value="Recruting"></constructor-arg>
+	</bean>
+	<bean id="r5" class="com.two95.employee.Recruiter">
+		<constructor-arg value="Soorya"></constructor-arg>
+		<constructor-arg value="su@gmail.com"></constructor-arg>
+		<constructor-arg value="Assistant Manager"></constructor-arg>
+		<constructor-arg value="Recruting"></constructor-arg>
+	</bean>
+	<bean id="m1" class="com.two95.employee.Marketing">
+		<constructor-arg value="CJ"></constructor-arg>
+		<constructor-arg value="c@gmail.com"></constructor-arg>
+		<constructor-arg value="Sales Head"></constructor-arg>
+		<constructor-arg value="Marketing"></constructor-arg>
+	</bean>
+	<bean id="m2" class="com.two95.employee.Marketing">
+		<constructor-arg value="Hridya"></constructor-arg>
+		<constructor-arg value="h@gmail.com"></constructor-arg>
+		<constructor-arg value="B.A"></constructor-arg>
+		<constructor-arg value="Marketing"></constructor-arg>
+	</bean>
+	<bean id="m3" class="com.two95.employee.Marketing">
+		<constructor-arg value="Nischala"></constructor-arg>
+		<constructor-arg value="n@gmail.com"></constructor-arg>
+		<constructor-arg value="SalesForce"></constructor-arg>
+		<constructor-arg value="Marketing"></constructor-arg>
+	</bean>
+
+	<bean id="m4" class="com.two95.employee.Marketing">
+		<constructor-arg value="Jisha"></constructor-arg>
+		<constructor-arg value="j@gmail.com"></constructor-arg>
+		<constructor-arg value="Finance"></constructor-arg>
+		<constructor-arg value="Marketing"></constructor-arg>
+	</bean>
+
+	<bean id="m5" class="com.two95.employee.Marketing">
+		<constructor-arg value="Drushi"></constructor-arg>
+		<constructor-arg value="d@gmail.com"></constructor-arg>
+		<constructor-arg value="QA"></constructor-arg>
+		<constructor-arg value="Marketing"></constructor-arg>
+	</bean>
+</beans>
