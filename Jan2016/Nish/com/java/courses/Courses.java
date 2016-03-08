@@ -6,9 +6,9 @@ public class Courses {
 	private String courseName;
 	private String duration;
 	private String fees;
+	
 	private List<Student> students;
 	private List<Trainer> trainer;
-	
 	
 	public Courses(String courseName, String duration, String fees, List<Student> students, List<Trainer> trainer) {
 		super();

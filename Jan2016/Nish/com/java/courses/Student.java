@@ -1,9 +1,11 @@
 package com.java.courses;
 
 public class Student {
+	
 	private String stuName;
 	private String stuID;
 	private String courseTaken;
+	
 	public Student(String stuName, String stuID, String courseTaken) {
 		super();
 		this.stuName = stuName;
