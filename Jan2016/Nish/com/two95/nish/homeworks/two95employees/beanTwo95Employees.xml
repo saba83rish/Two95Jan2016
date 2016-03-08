@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="two95employees" class="com.java.homeworks.Two95Employees">
+		<constructor-arg>
+			<list>
+				<ref bean="emp1" />
+				<ref bean="emp2" />
+				<ref bean="emp3" />
+				<ref bean="emp4" />
+				<ref bean="emp5" />
+			</list>
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="emp6" />
+				<ref bean="emp7" />
+				<ref bean="emp8" />
+				<ref bean="emp9" />
+				<ref bean="emp10" />
+			</list>
+		</constructor-arg>	
+	</bean>
+	<bean id="emp1" class="com.java.homeworks.RecruitmentEmployees">
+		<constructor-arg value="John Sullivan"></constructor-arg>
+		<constructor-arg value="Manager"></constructor-arg>
+		<constructor-arg value="john@two95.com"></constructor-arg>
+		<constructor-arg value="Recruitment Team"></constructor-arg>
+	</bean>
+	<bean id="emp2" class="com.java.homeworks.RecruitmentEmployees">
+		<constructor-arg value="David Cayl"></constructor-arg>
+		<constructor-arg value="Assitant Manager"></constructor-arg>
+		<constructor-arg value="david@two95.com"></constructor-arg>
+		<constructor-arg value="Recruitment Team"></constructor-arg>
+	</bean>
+	<bean id="emp3" class="com.java.homeworks.RecruitmentEmployees">
+		<constructor-arg value="Smith Johnson"></constructor-arg>
+		<constructor-arg value="Lead"></constructor-arg>
+		<constructor-arg value="smith@two95.com"></constructor-arg>
+		<constructor-arg value="Recruitment Team"></constructor-arg>
+	</bean>
+	<bean id="emp4" class="com.java.homeworks.RecruitmentEmployees">
+		<constructor-arg value="Rita Prasad Gupta"></constructor-arg>
+		<constructor-arg value="Employee"></constructor-arg>
+		<constructor-arg value="rita@two95.com"></constructor-arg>
+		<constructor-arg value="Recruitment Team"></constructor-arg>
+	</bean>
+	<bean id="emp5" class="com.java.homeworks.RecruitmentEmployees">
+		<constructor-arg value="Neha Shrestha"></constructor-arg>
+		<constructor-arg value="HR"></constructor-arg>
+		<constructor-arg value="neha@two95.com"></constructor-arg>
+		<constructor-arg value="Recruitment Team"></constructor-arg>
+	</bean>
+	<bean id="emp6" class="com.java.homeworks.MarketingEmployees">
+		<constructor-arg value="Christopher Benjamin"></constructor-arg>
+		<constructor-arg value="Manager"></constructor-arg>
+		<constructor-arg value="chris@two95.com"></constructor-arg>
+		<constructor-arg value="Marketing Team"></constructor-arg>
+	</bean>
+	<bean id="emp7" class="com.java.homeworks.MarketingEmployees">
+		<constructor-arg value="Hari Poudyal"></constructor-arg>
+		<constructor-arg value="Assistant Manager"></constructor-arg>
+		<constructor-arg value="hari@two95.com"></constructor-arg>
+		<constructor-arg value="Marketing Team"></constructor-arg>
+	</bean>
+	<bean id="emp8" class="com.java.homeworks.MarketingEmployees">
+		<constructor-arg value="Riya Kapoor"></constructor-arg>
+		<constructor-arg value="Team Lead"></constructor-arg>
+		<constructor-arg value="riya@two95.com"></constructor-arg>
+		<constructor-arg value="Marketing Team"></constructor-arg>
+	</bean>
+	<bean id="emp9" class="com.java.homeworks.MarketingEmployees">
+		<constructor-arg value="Jia Sharma"></constructor-arg>
+		<constructor-arg value="Employee"></constructor-arg>
+		<constructor-arg value="jia@two95.com"></constructor-arg>
+		<constructor-arg value="Marketing Team"></constructor-arg>
+	</bean>
+	<bean id="emp10" class="com.java.homeworks.MarketingEmployees">
+		<constructor-arg value="Piya KC"></constructor-arg>
+		<constructor-arg value="HR"></constructor-arg>
+		<constructor-arg value="piya@two95.com"></constructor-arg>
+		<constructor-arg value="Marketing Team"></constructor-arg>
+	</bean>
+
+</beans>
