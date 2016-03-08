@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<bean id="s1" class="com.two95.Card.Cards">
+<constructor-arg>
+<list>
+<ref bean="sp"></ref>
+</list>
+</constructor-arg>
+
+<constructor-arg>
+<list>
+<ref bean="cl"></ref>
+</list>
+</constructor-arg>
+
+<constructor-arg>
+<list>
+<ref bean="he"></ref>
+</list>
+</constructor-arg>
+
+<constructor-arg>
+<list>
+<ref bean="di"></ref>
+</list>
+</constructor-arg>
+
+</bean>
+<bean id="sp" class="com.two95.Card.Spade">
+<constructor-arg value="Spades"></constructor-arg>
+<constructor-arg value="Black"></constructor-arg>
+<constructor-arg>
+<list>
+<value>A</value>
+<value>K</value>
+<value>Q</value>
+<value>J</value>
+<value>1</value>
+<value>2</value>
+<value>3</value>
+<value>4</value>
+<value>5</value>
+<value>6</value>
+<value>7</value>
+<value>8</value>
+<value>9</value>
+<value>10</value>
+</list></constructor-arg>
+</bean>
+
+
+<bean id="cl" class="com.two95.Card.Clubs">
+<constructor-arg value="Clubs"></constructor-arg>
+<constructor-arg value="Black"></constructor-arg>
+<constructor-arg>
+<list>
+<value>A</value>
+<value>K</value>
+<value>Q</value>
+<value>J</value>
+<value>1</value>
+<value>2</value>
+<value>3</value>
+<value>4</value>
+<value>5</value>
+<value>6</value>
+<value>7</value>
+<value>8</value>
+<value>9</value>
+<value>10</value>
+
+</list>
+</constructor-arg>
+</bean>
+
+<bean id="he" class="com.two95.Card.Hearts">
+<constructor-arg value="Hearts"></constructor-arg>
+<constructor-arg value="Red"></constructor-arg>
+<constructor-arg>
+<list>
+<value>A</value>
+<value>K</value>
+<value>Q</value>
+<value>J</value>
+<value>1</value>
+<value>2</value>
+<value>3</value>
+<value>4</value>
+<value>5</value>
+<value>6</value>
+<value>7</value>
+<value>8</value>
+<value>9</value>
+<value>10</value>
+</list>
+</constructor-arg>
+</bean>
+
+<bean id="di" class="com.two95.Card.Diamonds">
+<constructor-arg value="Diamonds"></constructor-arg>
+<constructor-arg value="Red"></constructor-arg>
+<constructor-arg>
+<list>
+<value>A</value>
+<value>K</value>
+<value>Q</value>
+<value>J</value>
+<value>1</value>
+<value>2</value>
+<value>3</value>
+<value>4</value>
+<value>5</value>
+<value>6</value>
+<value>7</value>
+<value>8</value>
+<value>9</value>
+<value>10</value>
+
+</list>
+</constructor-arg>
+
+
+</bean>
+</beans>
