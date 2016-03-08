@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="cardVal" class="com.two95.cards.CardValue">
+		<constructor-arg value="A"></constructor-arg>
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="2"></constructor-arg>
+		<constructor-arg value="3"></constructor-arg>
+		<constructor-arg value="4"></constructor-arg>
+		<constructor-arg value="5"></constructor-arg>
+		<constructor-arg value="6"></constructor-arg>
+		<constructor-arg value="7"></constructor-arg>
+		<constructor-arg value="8"></constructor-arg>
+		<constructor-arg value="9"></constructor-arg>
+		<constructor-arg value="10"></constructor-arg>
+		<constructor-arg value="J"></constructor-arg>
+		<constructor-arg value="K"></constructor-arg>
+		<constructor-arg value="Q"></constructor-arg>
+	</bean>
+	<bean id="clubs" class="com.two95.cards.Suites">
+		<constructor-arg value="Clubs"></constructor-arg>
+		<constructor-arg value="black"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="cardVal" />
+
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="hearts" class="com.two95.cards.Suites">
+		<constructor-arg value="Hearts"></constructor-arg>
+		<constructor-arg value="red"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="cardVal" />
+
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="dice" class="com.two95.cards.Suites">
+		<constructor-arg value="Dice"></constructor-arg>
+		<constructor-arg value="red"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="cardVal" />
+
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="spade" class="com.two95.cards.Suites">
+		<constructor-arg value="Spade"></constructor-arg>
+		<constructor-arg value="black"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="cardVal" />
+
+			</list>
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="cards" class="com.two95.cards.Card">
+
+		<constructor-arg>
+			<list>
+				<ref bean="clubs" />
+				<ref bean="hearts" />
+				<ref bean="dice" />
+				<ref bean="spade" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>  
