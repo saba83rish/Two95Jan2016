@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+"http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<bean id="a" class="com.two95.Courses.Student">
+<constructor-arg value="Hridya"></constructor-arg>
+<constructor-arg value="100"></constructor-arg>
+<constructor-arg value="java"></constructor-arg>
+</bean>
+<bean id="b" class="com.two95.Courses.Student">
+<constructor-arg value="CJ"></constructor-arg>
+<constructor-arg value="100"></constructor-arg>
+<constructor-arg value="java"></constructor-arg>
+</bean>
+<bean id="c" class="com.two95.Courses.Student">
+<constructor-arg value="Nischala"></constructor-arg>
+<constructor-arg value="100"></constructor-arg>
+<constructor-arg value="java"></constructor-arg>
+</bean>
+<bean id="d" class="com.two95.Courses.Student">
+<constructor-arg value="Jisha"></constructor-arg>
+<constructor-arg value="100"></constructor-arg>
+<constructor-arg value="java"></constructor-arg>
+</bean>
+
+<bean id="a1" class="com.two95.Courses.Student">
+<constructor-arg value="Balu"></constructor-arg>
+<constructor-arg value="100"></constructor-arg>
+<constructor-arg value="Android"></constructor-arg>
+</bean>
+
+<bean id="b1" class="com.two95.Courses.Student">
+<constructor-arg value="Ansari"></constructor-arg>
+<constructor-arg value="100"></constructor-arg>
+<constructor-arg value="Android"></constructor-arg>
+</bean>
+
+<bean id="c1" class="com.two95.Courses.Student">
+<constructor-arg value="Christin"></constructor-arg>
+<constructor-arg value="100"></constructor-arg>
+<constructor-arg value="Android"></constructor-arg>
+</bean>
+
+<bean id="a3" class="com.two95.Courses.Student">
+<constructor-arg value="George"></constructor-arg>
+<constructor-arg value="100"></constructor-arg>
+<constructor-arg value="Hadoop"></constructor-arg>
+</bean>
+
+<bean id="b3" class="com.two95.Courses.Student">
+<constructor-arg value="Samuel"></constructor-arg>
+<constructor-arg value="100"></constructor-arg>
+<constructor-arg value="Hadoop"></constructor-arg>
+</bean>
+
+<bean id="e" class="com.two95.Courses.Trainer">
+<constructor-arg value="Ansari"></constructor-arg>
+<constructor-arg value="009"></constructor-arg>
+<constructor-arg value="java"></constructor-arg>
+</bean>
+
+<bean id="f" class="com.two95.Courses.Trainer">
+<constructor-arg value="Sabarish"></constructor-arg>
+<constructor-arg value="009"></constructor-arg>
+<constructor-arg value="Android"></constructor-arg>
+</bean>
+
+<bean id="g" class="com.two95.Courses.Trainer">
+<constructor-arg value="Balu"></constructor-arg>
+<constructor-arg value="009"></constructor-arg>
+<constructor-arg value="Hadoop"></constructor-arg>
+</bean>
+
+
+<bean id="h" class="com.two95.Courses.Course">
+<constructor-arg value="java"></constructor-arg>
+<constructor-arg value="2 hrs"></constructor-arg>
+<constructor-arg>
+<list>
+<ref bean="a"></ref>
+<ref bean="b"></ref>
+<ref bean="c"></ref>
+<ref bean="d"></ref>
+</list>
+</constructor-arg>
+<constructor-arg>
+<list>
+<ref bean="e"></ref>
+</list>
+</constructor-arg>
+</bean>
+
+<bean id="i" class="com.two95.Courses.Course">
+<constructor-arg value="Android"></constructor-arg>
+<constructor-arg value="3 hrs"></constructor-arg>
+<constructor-arg>
+<list>
+<ref bean="a1"></ref>
+<ref bean="b1"></ref>
+<ref bean="c1"></ref>
+</list>
+</constructor-arg>
+<constructor-arg>
+<list>
+<ref bean="f"></ref>
+</list>
+</constructor-arg>
+</bean>
+
+<bean id="j" class="com.two95.Courses.Course">
+<constructor-arg value="Hadoop"></constructor-arg>
+<constructor-arg value="3.5 hrs"></constructor-arg>
+<constructor-arg>
+<list>
+<ref bean="a3"></ref>
+<ref bean="b3"></ref>
+</list>
+</constructor-arg>
+<constructor-arg>
+<list>
+<ref bean="g"></ref>
+</list>
+</constructor-arg>
+</bean>
+
+</beans>
