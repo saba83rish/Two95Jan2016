@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="cards" class="com.java.deckcards.Cards">
+		<constructor-arg>
+			<list>
+				<ref bean="clubs" />
+			</list>
+			</constructor-arg>
+			<constructor-arg>
+			<list>
+				<ref bean="hearts" />
+			</list>
+			</constructor-arg>	
+			<constructor-arg>
+			<list>
+				<ref bean="dice" />
+			</list>
+			</constructor-arg>
+			<constructor-arg>
+			<list>
+				<ref bean="spade" />
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="clubs" class="com.java.deckcards.Clubs">
+		<constructor-arg value="BLACK"></constructor-arg>
+		<constructor-arg value="13"></constructor-arg>
+		<constructor-arg>
+		<list>
+		 <value>A</value>
+		 <value>1</value>
+		 <value>2</value>
+		 <value>3</value>
+		 <value>4</value>
+		 <value>5</value>
+		 <value>6</value>
+		 <value>7</value>
+		 <value>8</value>
+		 <value>9</value>
+		 <value>10</value>
+		 <value>J</value>
+		 <value>Q</value>
+		 <value>K</value>
+	</list>
+		</constructor-arg>
+	</bean>
+	<bean id="hearts" class="com.java.deckcards.Hearts">
+		<constructor-arg value="RED"></constructor-arg>
+		<constructor-arg value="13"></constructor-arg>
+		<constructor-arg>
+		<list>
+		 <value>A</value>
+		 <value>1</value>
+		 <value>2</value>
+		 <value>3</value>
+		 <value>4</value>
+		 <value>5</value>
+		 <value>6</value>
+		 <value>7</value>
+		 <value>8</value>
+		 <value>9</value>
+		 <value>10</value>
+		 <value>J</value>
+		 <value>Q</value>
+		 <value>K</value>
+	</list>
+		</constructor-arg>
+	</bean>
+	<bean id="dice" class="com.java.deckcards.Dice">
+		<constructor-arg value="RED"></constructor-arg>
+		<constructor-arg value="13"></constructor-arg>
+		<constructor-arg>
+		<list>
+		 <value>A</value>
+		 <value>1</value>
+		 <value>2</value>
+		 <value>3</value>
+		 <value>4</value>
+		 <value>5</value>
+		 <value>6</value>
+		 <value>7</value>
+		 <value>8</value>
+		 <value>9</value>
+		 <value>10</value>
+		 <value>J</value>
+		 <value>Q</value>
+		 <value>K</value>
+	</list>
+		</constructor-arg>
+	</bean>
+	<bean id="spade" class="com.java.deckcards.Spade">
+		<constructor-arg value="BLACK"></constructor-arg>
+		<constructor-arg value="13"></constructor-arg>
+		<constructor-arg>
+		<list>
+		 <value>A</value>
+		 <value>1</value>
+		 <value>2</value>
+		 <value>3</value>
+		 <value>4</value>
+		 <value>5</value>
+		 <value>6</value>
+		 <value>7</value>
+		 <value>8</value>
+		 <value>9</value>
+		 <value>10</value>
+		 <value>J</value>
+		 <value>Q</value>
+		 <value>K</value>
+	</list>
+		</constructor-arg>
+	</bean>
+	</beans>
