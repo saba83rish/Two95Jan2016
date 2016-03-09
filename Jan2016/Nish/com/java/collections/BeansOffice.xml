@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+ "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="office" class="com.java.collections.Office">
+		<constructor-arg value="Sunguard"></constructor-arg>
+		<constructor-arg>
+			<list>
+			<ref bean = "emp1" />
+			<ref bean = "emp2" />
+	
+			</list>
+		</constructor-arg>
+	
+	</bean>
+	<bean id="emp1" class="com.java.collections.Employees">
+		<constructor-arg value="David"></constructor-arg>
+		<constructor-arg value="12345"></constructor-arg>
+	</bean>
+	<bean id="emp2" class="com.java.collections.Employees">
+		<constructor-arg value="Harry"></constructor-arg>
+		<constructor-arg value="7890"></constructor-arg>
+	</bean>
+	
+</beans>
+	
+	
+	
