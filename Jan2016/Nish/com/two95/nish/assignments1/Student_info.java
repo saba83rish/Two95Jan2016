@@ -3,6 +3,6 @@ public class Student_info
 {
 	public static void main(String[] args)
 	{
-		// Hai This is a comment
+		// Something Happened
 	}
 }
