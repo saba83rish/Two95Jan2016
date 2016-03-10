@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="emp1" class="com.two95.emp.Employee">
+		<property name="empName" value="Christin"></property>
+		<property name="empDesg" value="Manager"></property>
+		<property name="empEmail" value="cjt@gmail.com"></property>
+	</bean>
+	<bean id="emp2" class="com.two95.emp.Employee">
+		<property name="empName" value="Chris"></property>
+		<property name="empDesg" value="Asst.Manager"></property>
+		<property name="empEmail" value="cj@gmail.com"></property>
+	</bean>
+	<bean id="emp3" class="com.two95.emp.Employee">
+		<property name="empName" value="Cj"></property>
+		<property name="empDesg" value="Officer"></property>
+		<property name="empEmail" value="officer@gmail.com"></property>
+	</bean>
+	<bean id="emp4" class="com.two95.emp.Employee">
+		<property name="empName" value="John"></property>
+		<property name="empDesg" value="hr"></property>
+		<property name="empEmail" value="hr@gmail.com"></property>
+	</bean>
+	<bean id="emp5" class="com.two95.emp.Employee">
+		<property name="empName" value="J"></property>
+		<property name="empDesg" value="Cashier"></property>
+		<property name="empEmail" value="cash@gmail.com"></property>
+	</bean>
+	<bean id="emp6" class="com.two95.emp.Employee">
+		<property name="empName" value="Tom"></property>
+		<property name="empDesg" value="Accountant"></property>
+		<property name="empEmail" value="acc@gmail.com"></property>
+	</bean>
+	<bean id="emp7" class="com.two95.emp.Employee">
+		<property name="empName" value="Thomas"></property>
+		<property name="empDesg" value="CEO"></property>
+		<property name="empEmail" value="ceo@gmail.com"></property>
+	</bean>
+	<bean id="emp8" class="com.two95.emp.Employee">
+		<property name="empName" value="Christo"></property>
+		<property name="empDesg" value="Director"></property>
+		<property name="empEmail" value="dir@gmail.com"></property>
+	</bean>
+	<bean id="emp9" class="com.two95.emp.Employee">
+		<property name="empName" value="Chr"></property>
+		<property name="empDesg" value="Clerk"></property>
+		<property name="empEmail" value="cj@gmail.com"></property>
+	</bean>
+	<bean id="emp10" class="com.two95.emp.Employee">
+		<property name="empName" value="Christopher"></property>
+		<property name="empDesg" value="Manager"></property>
+		<property name="empEmail" value="cj@gmail.com"></property>
+	</bean>
+	<bean id="recruit" class="com.two95.emp.Team">
+<constructor-arg value="Recruiting"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="emp1" />
+				<ref bean="emp2" />
+				<ref bean="emp4" />
+				<ref bean="emp7" />
+				<ref bean="emp8" />
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="marketing" class="com.two95.emp.Team">
+<constructor-arg value="Marketing"></constructor-arg>
+		<constructor-arg>
+			<list>
+				<ref bean="emp3" />
+				<ref bean="emp5" />
+				<ref bean="emp6" />
+				<ref bean="emp10" />
+				<ref bean="emp9" />
+				
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="team" class="com.two95.emp.Two95">
+
+		<constructor-arg>
+			<list>
+				<ref bean="recruit" />
+				<ref bean="marketing" />
+				
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>  
