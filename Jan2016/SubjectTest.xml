@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+<bean id="student" class="com.two95.parentbean.Student">
+<property name="student">
+<list>
+<value>Hridya</value>
+<value>CJ</value>
+<value>Nischala</value>
+<value>Jisha</value>
+<value>Drushi</value>
+<value>Madhu</value>
+<value>Srikanth</value>
+<value>Jagan</value>
+<value>Michola</value>
+</list>
+</property>
+</bean>
+
+<bean id="java1" class="com.two95.parentbean.JavaExam" parent="student" >
+<property name="examname" value="java"></property>
+<property name="trainer" value="ansari"></property>
+</bean>
+
+<bean id="android1" class="com.two95.parentbean.AndroidExam" parent="student">
+<property name="examname" value="android"></property>
+<property name="trainer" value="sabarish"></property>
+</bean> 
+</beans>
