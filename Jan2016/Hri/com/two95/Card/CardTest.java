@@ -6,7 +6,7 @@ import org.springframework.core.io.FileSystemResource;
 
 import com.two95.Card.Cards;
 
-public class Ctest {
+public class CardTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
