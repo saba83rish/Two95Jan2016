@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> 
+<bean id="home" class="com.two95.home.BuildingHome"></bean>
+<bean id="badvice" class="com.two95.home.BeforeAdvice"></bean> 
+<bean id="afadvice" class="com.two95.home.AfterAdvice"></bean>
+<bean id="aroundadvice" class="com.two95.home.AroundAdvice"></bean>
+<bean id="validator" class="com.two95.home.Validate"></bean>
+<bean id="throwsadvice" class="com.two95.home.ThrowsAdvisor"></bean>
+<bean id="proxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+<property name="target" ref="home"></property>
+<property name="interceptorNames">
+<list>
+<value>badvice</value>
+<value>afadvice</value>
+<value>aroundadvice</value>
+</list>
+</property>
+</bean>
+<bean id="proxyvalidate" class="org.springframework.aop.framework.ProxyFactoryBean">
+<property name="target" ref="validator"></property>
+<property name="interceptorNames">
+<list>
+<value>throwsadvice</value>
+</list>
+</property>
+</bean>
+  </beans>
