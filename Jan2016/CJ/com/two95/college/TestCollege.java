@@ -17,8 +17,8 @@ public class TestCollege {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("beanCollege.xml");
 		College college=(College) ctx.getBean("college");
 		college.display();
-	Courses s=(Courses) ctx.getBean("course1");
-	Courses s1=(Courses) ctx.getBean("course2");
+	Course s=(Course) ctx.getBean("course1");
+	Course s1=(Course) ctx.getBean("course2");
 		List<Student> st=s.getStudent();
 		List<Student> st1=s1.getStudent();
 		List<String> newList = new ArrayList<String>();
