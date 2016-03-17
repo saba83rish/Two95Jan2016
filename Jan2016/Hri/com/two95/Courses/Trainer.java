@@ -10,7 +10,7 @@ public class Trainer {
 	
 	
 	public Trainer(String trainername, String id, String course) {
-		super();
+		//super();
 		this.trainername = trainername;
 		this.id = id;
 		this.course = course;

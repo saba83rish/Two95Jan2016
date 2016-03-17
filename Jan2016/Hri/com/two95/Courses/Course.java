@@ -11,7 +11,7 @@ public class Course {
 	List<Student>students;
 	List<Trainer>trainer;
 	public Course(String coursename, String duration, List<Student> students, List<Trainer> trainer) {
-		super();
+		//super();
 		this.coursename = coursename;
 		this.duration = duration;
 		this.students = students;
@@ -44,7 +44,8 @@ public class Course {
 	
 	public void display(){
 		System.out.println("Course [coursename=" + coursename + ", duration=" + duration +"]");
-		System.out.println("trainer"+ trainer);		
+		System.out.println("trainer"+ trainer);	
+		
 				
 	
 	}

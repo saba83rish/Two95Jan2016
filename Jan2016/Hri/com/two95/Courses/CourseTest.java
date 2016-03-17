@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.FileSystemResource;
 
 //import com.two95.course.Course;
@@ -14,12 +16,31 @@ public class CourseTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		BeanFactory factory=new XmlBeanFactory(new FileSystemResource("StudentCourse.xml"));
+		ApplicationContext factory=new ClassPathXmlApplicationContext("StudentCourse.xml");
 		Course ui=(Course) factory.getBean("h");
 		Course ui1=(Course) factory.getBean("i");
 		Course ui2=(Course)factory.getBean("j");
 		
+		System.out.println("--------------------------------------");
+		List<Student> javaStud=ui.getStudents();
+		ui.display();
+		Collections.sort(javaStud);
+		System.out.println(javaStud);
 		
+		System.out.println("---------------------------------------");
+		List<Student> androidStud=ui1.getStudents();
+		ui.display();
+		Collections.sort(androidStud);
+		System.out.println(androidStud);
+		
+		System.out.println("----------------------------------------");
+		List<Student> hadoopStud=ui1.getStudents();
+		ui.display();
+		Collections.sort(hadoopStud);
+		System.out.println(hadoopStud);
+		
+		//ui.display();
+		/*
 		//ui2.display();
 		
 		System.out.println("-----------------------------");
@@ -49,7 +70,7 @@ public class CourseTest {
 		
 		System.out.println("Students"+l1);
 		
-System.out.println("Students"+l);
+//System.out.println("Students"+l);
 		
 		
 		System.out.println("---------------------------------");
@@ -64,7 +85,7 @@ System.out.println("Students"+l);
 		}
 		
 		System.out.println("Students"+l2);
-		
+		*/
 		
 		
 	}

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Student {
+public class Student implements Comparable {
 
 	String name;
 	String id;
@@ -43,7 +43,12 @@ public class Student {
 		this.coursename = coursename;
 	}
 	
-	
+	@Override
+	public int compareTo(Object arg0) {
+		// TODO Auto-generated method stub
+		Student s=(Student)arg0;
+		return this.name.compareTo(s.name);
+	}
 	
 	@Override
 	public String toString() {
@@ -51,5 +56,7 @@ public class Student {
 		
 		return "Student [name=" + name + ", id=" + id + ", coursename=" + coursename + "]";
 	}
+
+	
 	
 }
