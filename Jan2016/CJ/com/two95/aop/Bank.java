@@ -32,8 +32,11 @@ public void withdrawal() throws Exception
 {
 	System.out.println("need to withdraw");
 	ApplicationContext ctx=new ClassPathXmlApplicationContext("bankingConf.xml");
+	Customer c=(Customer) ctx.getBean("cust");
+	String user1=c.getUsername();
+	String pass=c.getPassword();
 	Authenticate ae=(Authenticate) ctx.getBean("proxy1");
-	ae.check();
+	ae.check(user1,pass);
 }
 public void balcheck()
 {
