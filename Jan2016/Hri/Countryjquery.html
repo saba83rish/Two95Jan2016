@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>jquery</title>
+<script type="text/javascript" src="js/JQuery.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$Countries = $("select[name='Countries']");
+	$states = $("select[name='states']");
+
+	$Countries.change(function() {
+
+		if ($(this).val() == "USA") {
+	$("select[name='states'] option").remove();
+	$("<option>NewJersey</option>").appendTo($states);
+	$("<option>NewYork</option>").appendTo($states);
+	$("<option>Texas</option>").appendTo($states);
+	$("<option>Tennesse</option>").appendTo($states);
+	$("<option>Virginia</option>").appendTo($states);
+	}
+
+	if ($(this).val() == "INDIA") 
+	{
+	$("select[name='states'] option").remove();
+	$("<option>Kerala</option>").appendTo($states);
+	$("<option>TN</option>").appendTo($states);
+	$("<option>AP</option>").appendTo($states);
+	$("<option>MP</option>").appendTo($states);
+	$("<option>KARNATAKA</option>").appendTo($states);
+	}
+
+	if ($(this).val() == "AUSTRALIA") 
+	{
+	$("select[name='states'] option").remove();
+	$("<option>Melbourne</option>").appendTo($states);
+	$("<option>place</option>").appendTo($states);
+	}
+	
+	if ($(this).val() == "Countries") {
+		$("select[name='states'] option").remove();
+		$("<option>States</option>").appendTo($states);
+	}
+
+	});
+});
+
+</script>
+</head>
+<body>
+<form>
+	<SELECT name="Countries">
+		<option>Countries</option>
+		<option>USA</option>
+		<option>INDIA</option>
+		<option>AUSTRALIA</option>
+	</select>
+	<select name="states" >
+		<option>States</option>
+	</select>
+</form>
+
+</body>
+
+
+</html>
