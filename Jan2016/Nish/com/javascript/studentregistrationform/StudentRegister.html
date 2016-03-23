@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form</title>
+<script>
+function validate() {
+    var name=document.forms["StudentRegistration"]["name"].value;
+    var age=document.forms["StudentRegistration"]["age"].value;
+
+    var alpha=parseInt(StudentRegistration.name.value);
+    var alphaAge=parseInt(StudentRegistration.age.value);
+
+    var symbols=/^[\w ]+$/;
+
+    if (name==null || name=="") {
+        alert("Please enter the name!");
+        return false;
+    }
+     if (name==alpha){
+      alert("Name must contain alphabets only");
+        return false;
+    }
+     
+     if(!symbols.test(StudentRegistration.name.value)){
+       alert("Name cannot be alphanumericals");
+         return false;
+     }
+     if (age==null || age=="") {
+         alert("Please filled the age");
+         return false;
+     }
+      if (age!=alphaAge){
+       alert("Age must contain numerics only");
+         return false;
+     }
+      
+      if(!symbols.test(StudentRegistration.age.value)){
+        alert("Name cannot be alphanumericals");
+          return false;
+      }    
+}
+</script>
+</head>
+<h1>Student Registration Form</h1>
+<body bgcolor = pink>
+<form action="StudentFormComplete.html" name="StudentRegistration" onsubmit="return validate()">
+
+<table>
+<tr><td>Name</td>
+<td>
+<input type = text   name = name> </td></tr><br>
+
+<tr><td>Age</td>
+<td>
+<input type = text name = age>
+</td></tr>
+
+<tr><td>Gender</td>
+<td>
+<input type = "radio" name = g value = Male>Male<br>
+<input type = "radio" name = g value = Female >Female<br>
+<input type = "radio" name = g value = Other>Other<br>
+</td></tr>
+<tr><td> Status</td>
+<td>
+<input type = Checkbox name = a1 value = Single>Single <br>
+<input type = Checkbox name = a1 value = Married>Married <br>
+</td></tr>
+<tr><td>Undergraduate Year</td>
+<td>
+<select name="u">
+<option value = "one" > 1st </option>
+<option value = "two" > 2nd </option>
+<option value = "three" > 3rd </option>
+<option value = "four" > 4th </option>
+</select >
+</td></tr>
+</table>
+<input type = submit name = submit value= submit><br>
+</form>
+</body>
+</html>
