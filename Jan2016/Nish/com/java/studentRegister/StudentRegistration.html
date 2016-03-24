@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registration</title>
+<script>
+function formValidation()  
+{  
+var name=document.StudentRegistration.name;  
+var age=document.StudentRegistration.age; 
+var ud = document.StudentRegistration.u;
+var s = document.StudentRegistration.s;
+var f = document.StudentRegistration.f;
+var mg=document.StudentRegistration.mg;  
+var fg = document.StudentRegistration.fg;  
+  
+
+if(allLetter(name))  
+{     
+if(allNumeric(age))  
+{
+if(degreeSelect(ud))  
+{
+if(checkStatus(s,f))
+{
+if(validGender(mg,fg))  
+{  
+}  
+}   
+}  
+}
+}
+return false;   
+}
+function allLetter(name)  
+{   
+var letters = /^[A-Za-z]+$/;  
+if(name.value.match(letters))  
+{  
+return true;  
+}  
+else  
+{  
+alert('Name must have alphabet characters only');  
+name.focus();  
+return false;  
+}  
+} 
+function allNumeric(age)  
+{   
+var numbers = /^[0-9]+$/;  
+if(age.value.match(numbers))  
+{  
+return true;  
+}  
+else  
+{  
+alert('Age must have numeric characters only');  
+age.focus();  
+return false;  
+}  
+}  
+function degreeSelect(ud)  
+{  
+if(ud.value == "Default")  
+{  
+alert('Select your degree from the list');  
+ud.focus();  
+return false;  
+}  
+else  
+{  
+return true;  
+}  
+}
+function checkStatus(s,f){
+	x=0;
+if (s.checked)	{
+	x++
+}
+if(f.checked)  
+{  
+	x++;   
+	}  
+	if(x==0)  
+	{  
+	alert('Select your status!');  
+	s.focus();  
+	return false;  
+	}
+	else{
+		return true;
+	}
+}
+function validGender(mg,fg)  
+{  
+x=0;  
+  
+if(mg.checked)   
+{  
+x++;  
+} if(fg.checked)  
+{  
+x++;   
+}  
+if(x==0)  
+{  
+alert('Select Male/Female');  
+mg.focus();  
+return false;  
+}  
+else  
+{  
+alert('Form Succesfully Submitted');  
+window.location.reload()  
+return true;  
+}  
+}  
+</script>
+</head>
+<h1>Student Registration Form</h1>
+<body bgcolor=pink>
+	<form action="" name="StudentRegistration" onsubmit="return formValidation();" method="Post">
+		<table>
+			<tr>
+				<td>Name</td>
+				<td><input type=text name=name></td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input type=text name=age></td>
+			</tr>
+            <tr>
+				<td>Undergraduate Year</td>
+				<td><select name="u">
+				        <option selected="" value="Default">(Please select your degree)</option> 
+						<option value="one">1st</option>
+						<option value="two">2nd</option>
+						<option value="three">3rd</option>
+						<option value="four">4th</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><input type=Checkbox name=s value=Single>Single <br>
+					<input type=Checkbox name=f value=Married>Married <br>
+				</td>
+			</tr>
+     		<tr>
+				<td>Gender</td>
+				<td><input type="radio" name=mg  value=Male>Male<br>
+					<input type="radio" name=fg  value=Female >Female<br>
+				</td>
+			</tr>
+			
+			
+		</table>
+		<input type=submit name=submit value=submit><br>
+	</form>
+</body>
+</html>
