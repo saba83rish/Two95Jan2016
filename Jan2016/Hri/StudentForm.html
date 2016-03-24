@@ -10,6 +10,11 @@ function validateNameField() {
     var alpha=parseInt(LoginForm.t1.value);
     var alphaAge=parseInt(LoginForm.t2.value);
   	var symbols=/^[\w ]+$/;
+  	//var val=true;
+	//var i = 0;
+	var res="";
+	var val="";
+    
     if (s == null || s == "") {
         alert("Name must be filled out");
         return false;
@@ -37,14 +42,51 @@ function validateNameField() {
           return false;
       }
      
-   
-}
-
+	if(document.getElementById("a").checked==true){
+		
+		res=true;val=false;
+	}
+	else if(document.getElementById("b").checked==true){
+		
+		res=true;val=false;
+	}
+	else if(document.getElementById("o").checked==true){
+		
+		res=true;val=false;
+	}
+	else{
+		alert("must choose an option");
+		res=false;val=false;
+	}
+	
+	if(document.getElementById("c1").checked==true){
+		val=true;res=true;
+	}
+	else if(document.getElementById("c2").checked==true){
+		val=true;res=true;
+	}
+	else if(document.getElementById("c3").checked==true){
+		val=true;res=true;
+	}
+	else{
+		alert("checkbox must be selected");
+		val=false;res=true;
+	}
+	
+	 var x = document.getElementById("gender");
+     if (x.value == "SELECT") {
+         alert("Please choose your gender");
+         return false;
+     }
+	
+	return val;
+	return res;
+	}
 
 
 </script>
 </head>
-<body bgcolor="light-blue" >
+<body bgcolor="orange" >
 <form action="submittedform.html" onsubmit="return validateNameField()"  name="LoginForm"  >
 <h1>Student Registration form</h1>
 <table>
@@ -54,23 +96,23 @@ function validateNameField() {
 
 <tr>
 <td>Blood Group</td><br/>
-<td><input type=radio name=r1 value=B>B
-	<input type=radio name=r1 value=A>A
-	<input type=radio name=r1 value=O>O</td>
+<td><input type=radio name=r1 value=B id="b">B
+	<input type=radio name=r1 value=A id="a">A
+	<input type=radio name=r1 value=O id="o">O</td>
 </tr>
 
 <tr>
 <td>Best way to contact</td><br/>
-<td><input type=checkbox name=c1 value=mail>mail
-<input type=checkbox name=c1 value=phone>phone
-<input type=checkbox name=c1 value=fax>fax</td></tr>
+<td><input type=checkbox name=c1 value=mail id="c1">mail
+<input type=checkbox name=c1 value=phone id="c2">phone
+<input type=checkbox name=c1 value=fax id="c3">fax</td></tr>
 
 <tr><td>gender</td>
 <td>
-<select name=gender >
-<option value=SELECT ></option>
-<option value=M>Male</option>
-<option value=F>Female</option></select></td></tr>
+<select name=gender id="gender" >
+<option value=SELECT id="select" >select</option>
+<option value=M id="m">Male</option>
+<option value=F id="m">Female</option></select></td></tr>
 
 <tr><td><input type=submit value=submit></td></tr>
 
