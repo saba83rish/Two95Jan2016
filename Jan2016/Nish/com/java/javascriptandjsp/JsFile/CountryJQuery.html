@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jquery</title>
+<script type="text/javascript" src="JsFile/jqs.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $Countries = $("select[name='Countries']");
+  $states = $("select[name='states']");
+  $Countries.change(function() {
+    if ($(this).val() == "USA") {
+  $("select[name='states'] option").remove();
+  $("<option>NewJersey</option>").appendTo($states);
+  $("<option>NewYork</option>").appendTo($states);
+  $("<option>Alabama</option>").appendTo($states);
+  $("<option>Pennsylvania</option>").appendTo($states);
+  $("<option>Virginia</option>").appendTo($states);
+  }
+
+  if ($(this).val() == "Canada") 
+  {
+  $("select[name='states'] option").remove();
+  $("<option>Columbia</option>").appendTo($states);
+  $("<option>Yokun</option>").appendTo($states);
+  $("<option>Ontario</option>").appendTo($states);
+  $("<option>Nova Scotia</option>").appendTo($states);
+  }
+  
+  if ($(this).val() == "Countries") {
+    $("select[name='states'] option").remove();
+    $("<option>States</option>").appendTo($states);
+  }
+
+  });
+});
+</script>
+</head>
+<body>
+<form>
+  <SELECT name="Countries">
+    <option>Countries</option>
+    <option>USA</option>
+    <option>Canada</option>
+  </select>
+  <select name="states" >
+    <option>States</option>
+  </select>
+</form>
+</body>
+</html>       

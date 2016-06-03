@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+<bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">  
+<property name="driverClassName" value="com.mysql.jdbc.Driver" />  
+<property name="url" value="jdbc:mysql://localhost:3306/two95" />  
+<property name="username" value="root" />  
+<property name="password" value="nischala" />  
+</bean>  
+  
+<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">  
+<property name="dataSource" ref="ds"></property>  
+</bean>  
+
+<bean id = "lib" class = "com.java.dao.practice.Library">
+<constructor-arg value = "104" ></constructor-arg>
+<constructor-arg value = "Khanal"></constructor-arg>
+<constructor-arg value = "Alankar"></constructor-arg>
+<constructor-arg value = "107 Crescent Street"></constructor-arg>
+</bean>
+<bean id = "lib2" class = "com.java.dao.practice.Library">
+<constructor-arg value = "106" ></constructor-arg>
+<constructor-arg value = "Acharaya"></constructor-arg>
+<constructor-arg value = "Babita"></constructor-arg>
+<constructor-arg value = "34 Street"></constructor-arg>
+</bean>
+
+<bean id = "libdao" class = "com.java.dao.practice.LibraryDao">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property></bean>  
+</beans>
+
+
+
+
+
